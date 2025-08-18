@@ -1,0 +1,27 @@
+{
+  "name": "exercicios_cypress_heroes",
+  "version": "1.0.0",
+  "description": "Exercicios do app Cypress Heroes para o curso Lume Stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagosantos0412/exercicio_cypress_heroes.git"
+  },
+  "keywords": [
+    "cypress",
+    "testes",
+    "automatizados"
+  ],
+  "author": "Tiago Felipe dos Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiagosantos0412/exercicio_cypress_heroes/issues"
+  },
+  "homepage": "https://github.com/tiagosantos0412/exercicio_cypress_heroes#readme",
+  "devDependencies": {
+    "cypress": "^14.5.4"
+  }
+}
