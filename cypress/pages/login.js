@@ -7,6 +7,8 @@ class Login {
             userPssword: "[data-cy='password']",
             submitButton: '.undefined.w-full',
             errorLoginMessage: '.text-red-500',
+            emailRequireMessage: ':nth-child(1) > .text-red-500',
+            passwordRequireMessage: ':nth-child(2) > .text-red-500',
         }
         return selectors
     }
@@ -36,6 +38,8 @@ class Login {
         cy.get(this.selectorsList().loginButton).click()
         cy.get(this.selectorsList().modalVisible).should('be.visible')
         cy.get(this.selectorsList().submitButton).click()
+        cy.get(this.selectorsList().emailRequireMessage).should('be.visible')
+        cy.get(this.selectorsList().passwordRequireMessage).should('be.visible')
     }
 
     confirmLogin(){
