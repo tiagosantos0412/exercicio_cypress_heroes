@@ -4,7 +4,7 @@ import Login from "../pages/login";
 const login = new Login()
 
 describe('Cypress Heroes Tests', ()=>{
-  it('Login Success', ()=>{
+  it.only('Login Success', ()=>{
     login.accesLogin()
     login.loginWithAnyUser(
       userData.userSuccess.userEmail,
