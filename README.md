@@ -62,5 +62,3 @@ cypress-heroes/
 Login de usuário
 Cadastro de heróis
 Fluxos completos
-
-<div align="center"> <p>Feito com :heart: e Cypress</p> </div> ```

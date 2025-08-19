@@ -20,4 +20,15 @@ describe('Cypress Heroes Tests', ()=>{
     )
     login.confirmLogin()
   })
+  it('Login Fail', ()=>{
+    login.accesLogin()
+    login.loginFail(
+      'teste@teste.com',
+      '123456@'
+    )
+  })
+  it('Try Empty Login', ()=>{
+    login.accesLogin()
+    login.emptyLogin()
+  })
 })
