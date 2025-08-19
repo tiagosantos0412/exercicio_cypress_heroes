@@ -1,5 +1,23 @@
-describe('template spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+import userData from '../fixtures/user-data.json'
+import Login from "../pages/login";
+
+const login = new Login()
+
+describe('Cypress Heroes Tests', ()=>{
+  it('Login Success', ()=>{
+    login.accesLogin()
+    login.loginWithAnyUser(
+      userData.userSuccess.userEmail,
+      userData.userSuccess.password
+    )
+    login.confirmLogin()
+  })
+  it('Login Admin Success', ()=>{
+    login.accesLogin()
+    login.loginWithAnyUser(
+      userData.userAdmin.userEmail,
+      userData.userAdmin.password
+    )
+    login.confirmLogin()
   })
 })
