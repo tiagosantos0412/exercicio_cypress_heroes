@@ -1,59 +1,66 @@
+# Cypress Heroes - Automação de Testes E2E
 
-# Testes Automatizados com Cypress
+<div align="center">
+  <img src="https://www.cypress.io/static/cypress-io-logo-social-share-8fb8a1db3cdc0b289fad927694ecb415.png" width="200" alt="Cypress Logo">
+</div>
 
-Este projeto tem como objetivo demonstrar a automação de testes utilizando o [Cypress](https://www.cypress.io/), uma poderosa ferramenta de testes end-to-end. Os testes são realizados na aplicação de demonstração [OrangeHRM](https://opensource-demo.orangehrmlive.com/).
+Repositório de testes automatizados para a aplicação Cypress Heroes utilizando Cypress e boas práticas de automação.
 
-## Pré-requisitos
+## :sparkles: Recursos
 
-Antes de iniciar, você precisa ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+- Testes End-to-End completos
+- Padrão Page Objects
+- Relatórios de execução
+- Integração contínua
+- Dados de teste dinâmicos
 
-### Instalando o Node.js
+## :hammer_and_wrench: Tecnologias
 
-1. **Windows/Mac/Linux**:
-   - Acesse: https://nodejs.org/
-   - Baixe e instale a versão LTS recomendada para sua plataforma.
+| Tecnologia | Badge |
+|------------|-------|
+| JavaScript | ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) |
+| Cypress | ![Cypress](https://img.shields.io/badge/-Cypress-17202C?logo=cypress) |
+| GitHub Actions | ![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?logo=github-actions) |
+| Node.js | ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white) |
 
-2. Verifique se a instalação foi bem-sucedida:
-   ```bash
-   node -v
-   npm -v
-   ```
+## :package: Pré-requisitos
 
-## Instalação do Projeto
+- Node.js v16+
+- npm v8+
+- Cypress v12+
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/testes-cypress.git
-   cd testes-cypress
-   ```
+## :rocket: Como Executar
 
-2. Instale as dependências do projeto (incluindo o Cypress):
-   ```bash
-   npm install
-   ```
-
-3. Instale o Cypress (caso ainda não esteja incluído nas dependências):
-   ```bash
-   npm install cypress --save-dev
-   ```
-
-## Executando os Testes
-
-Para abrir o Test Runner do Cypress (modo interativo):
 ```bash
-npx cypress open
-```
+# Clone o repositório
+git clone https://github.com/seu-usuario/cypress-heroes.git
+cd cypress-heroes
 
-Para rodar os testes no modo headless (em terminal):
-```bash
-npx cypress run
-```
+# Instale as dependências
+npm install
 
-## Estrutura dos Testes
+# Execute os testes no modo headless
+npm test
 
-Os testes estão localizados na pasta `cypress/e2e/` e cobrem os seguintes cenários:
+# Ou abra o Cypress no modo interativo
+npm run cy:open
 
+# :building_construction: Estrutura do Projeto
+cypress-heroes/
+├── cypress/
+│   ├── e2e/              # Especificações de teste
+│   ├── fixtures/         # Dados de teste
+│   ├── pages/            # Page Objects
+│   ├── plugins/          # Plugins do Cypress
+│   └── support/          # Comandos customizados
+├── reports/              # Relatórios de execução
+├── .github/workflows/    # Configurações de CI
+├── cypress.config.js     # Configuração do Cypress
+└── package.json
 
-## Contribuição
+# :test_tube: Principais Testes
+Login de usuário
+Cadastro de heróis
+Fluxos completos
 
-Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias!
+<div align="center"> <p>Feito com :heart: e Cypress</p> </div> ```
