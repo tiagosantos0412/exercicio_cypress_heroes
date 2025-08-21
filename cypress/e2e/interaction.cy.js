@@ -17,9 +17,21 @@ describe('Cypress Hero Tests', ()=>{
         like.likeHero()
     })
     it('Hire a Hero', ()=>{
+        login.accesLogin()
+        login.loginWithAnyUser(
+            userData.userSuccess.userEmail,
+            userData.userSuccess.password
+        )
+        login.confirmLogin()
         hire.hireAHero()
     })
     it('Cancel Hire', ()=>{
-        hire.cancelHire()
+        login.accesLogin()
+        login.loginWithAnyUser(
+            userData.userSuccess.userEmail,
+            userData.userSuccess.password
+        )
+        login.confirmLogin()
+        hire.cancelHire
     })
 })
