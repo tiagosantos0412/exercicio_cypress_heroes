@@ -6,5 +6,8 @@
     "userAdmin":{
         "userEmail": "admin@test.com",
         "password": "test123"
+    },
+    "avatarTest":{
+        "avatar": "../img/avatar.png"
     }
 }
