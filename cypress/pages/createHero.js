@@ -1,3 +1,5 @@
+import 'cypress-file-upload'
+
 class CreateHero {
     selectorsList(){
         const selectors = {
@@ -6,9 +8,12 @@ class CreateHero {
             inputPrice: "[data-cy='priceInput']",
             inputFans: "[data-cy='fansInput']",
             inputSaves: "[data-cy='savesInput']",
-            powerSelector: "[data-cy='powersSelect']",
+            powerSelector: "[multiple='']",
+            //powerSelector: "[data-cy='powersSelect']",
             choseAvatarFile: "[data-cy='avatarFile']",
             butonSubmit: ".text-white",
+            home: "[src='/images/cyheroes-logo.svg']",
+            confirmNewHero: "[data-cy='name']",
         }
         return selectors
     }
@@ -19,10 +24,10 @@ class CreateHero {
         cy.get(this.selectorsList().inputPrice).type(price)
         cy.get(this.selectorsList().inputFans).type(fans)
         cy.get(this.selectorsList().inputSaves).type(saves)
-        cy.get(this.selectorsList().powerSelector).should('be.visible')
-        cy.contains('Mind Control').click()
+        cy.get(this.selectorsList().powerSelector).select(5)
         cy.get(this.selectorsList().choseAvatarFile).attachFile(avatar)
-        cy.get(this.selectorsList().butonSubmit).click()
+        cy.get(this.selectorsList().butonSubmit).eq(1).click()
+        cy.get(this.selectorsList().confirmNewHero).contains('Steve').should('be.visible')
     }
 }
 

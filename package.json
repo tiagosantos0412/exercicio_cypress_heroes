@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/tiagosantos0412/exercicio_cypress_heroes#readme",
   "devDependencies": {
-    "cypress": "^14.5.4"
+    "cypress": "^14.5.4",
+    "cypress-file-upload": "^5.0.8"
   }
 }
