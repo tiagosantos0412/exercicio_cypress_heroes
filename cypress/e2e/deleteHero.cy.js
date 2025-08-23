@@ -15,4 +15,13 @@ describe('Cypress Heroes Tests', ()=>{
         login.confirmLogin()
         deleteHero.deleteHeroSuccess()
     })
+    it.only('Cancel Delte Hero', ()=>{
+        login.accesLogin()
+        login.loginWithAnyUser(
+            userData.userAdmin.userEmail,
+            userData.userAdmin.password
+        )
+        login.confirmLogin()
+        deleteHero.cancelDeleteHero()
+    })
 })

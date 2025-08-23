@@ -19,8 +19,8 @@ class DeleteHero {
     }
 
     cancelDeleteHero(){
-        cy.get(this.selectorsList().heroCard).eq(7).click()
-        cy.get(this.selectorsList().btnRemoveHero).click()
+        cy.get(this.selectorsList().heroCard).eq(0).click()
+        cy.get(this.selectorsList().btnRemoveHero).eq(0).click()
         cy.get(this.selectorsList().btnCancelDelete).click()
         cy.get(this.selectorsList().confirmNewHero).contains('Steve').should('be.visible')
     }
