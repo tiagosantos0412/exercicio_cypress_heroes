@@ -1,7 +1,6 @@
 class Interaction{
     selectorsList(){
         const selectors = {
-            heroCard: "data-cy='hero-card'",
             likeButton: '[data-cy="like"]',
             hireButton: '[data-cy="money"]',
             confirmHire: '[data-cy="confirm-hire"], .text-white',
