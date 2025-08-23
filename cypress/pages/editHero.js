@@ -19,15 +19,15 @@ class EditHero{
     }
 
     editHeroSuccess(name, price, fans, saves, avatar){
-        //cy.get(this.selectorsList().heroCard).eq(7).should('be,visible').click()
         cy.get(this.selectorsList().btnEditHero).eq(7).click()
-        cy.get(this.selectorsList().inputName).type(name)
-        cy.get(this.selectorsList().inputPrice).type(price)
-        cy.get(this.selectorsList().inputFans).type(fans)
-        cy.get(this.selectorsList().inputSaves).type(saves)
+        cy.get(this.selectorsList().inputName).clear().type(name)
+        cy.get(this.selectorsList().inputPrice).clear().type(price)
+        cy.get(this.selectorsList().inputFans).clear().type(fans)
+        cy.get(this.selectorsList().inputSaves).clear().type(saves)
         cy.get(this.selectorsList().powerSelector).select(2)
-        cy.get(this.selectorsList().butonSubmit).eq(1).click()
-        cy.get(this.selectorsList().confirmNewHero).contains('Angelita').should('be.visible')
+        cy.get(this.selectorsList().choseAvatarFile).attachFile(avatar)
+        cy.get(this.selectorsList().butonSubmit).eq(2).click()
+        cy.get(this.selectorsList().confirmHeroEdited).contains('Angelita').should('be.visible')
     }
 }
 
