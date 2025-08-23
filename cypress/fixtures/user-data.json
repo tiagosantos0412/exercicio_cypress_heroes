@@ -8,6 +8,7 @@
         "password": "test123"
     },
     "avatarTest":{
-        "avatar": "../img/avatar.png"
+        "avatar": "../img/avatar.png",
+        "avatar2": "../img/avatar2.png"
     }
 }

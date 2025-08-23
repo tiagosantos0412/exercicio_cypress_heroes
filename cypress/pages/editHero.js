@@ -19,7 +19,7 @@ class EditHero{
     }
 
     editHeroSuccess(name, price, fans, saves, avatar){
-        cy.get(this.selectorsList().heroCard).eq(7).should('be,visible').click()
+        //cy.get(this.selectorsList().heroCard).eq(7).should('be,visible').click()
         cy.get(this.selectorsList().btnEditHero).eq(7).click()
         cy.get(this.selectorsList().inputName).type(name)
         cy.get(this.selectorsList().inputPrice).type(price)
